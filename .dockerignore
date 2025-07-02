@@ -1,0 +1,46 @@
+# Ambientes virtuais
+venv/
+env/
+.env
+
+# Cache Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Documentação
+readme.md
+README.md
+*.md
+
+# Arquivos temporários
+.tmp/
+temp/
+
+# Logs
+*.log
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Docker
+Dockerfile*
+docker-compose*.yml
+
+# Arquivos grandes desnecessários
+*.deb
+*.tar.gz
+*.zip 
