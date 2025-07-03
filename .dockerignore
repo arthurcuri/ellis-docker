@@ -31,6 +31,7 @@ temp/
 
 # Logs
 *.log
+logs/
 
 # Arquivos de sistema
 .DS_Store
@@ -39,8 +40,17 @@ Thumbs.db
 # Docker
 Dockerfile*
 docker-compose*.yml
+Makefile
 
 # Arquivos grandes desnecessários
 *.deb
 *.tar.gz
-*.zip 
+*.zip
+
+# Backups do banco de dados
+*.db.backup.*
+*.backup
+
+# Arquivos de configuração específicos do desenvolvimento
+nginx.conf
+ssl/ 

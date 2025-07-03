@@ -4,8 +4,8 @@ FROM python:3.13.5-alpine3.22
 # Define o diretório de trabalho dentro do container
 WORKDIR /app
 
-# Instala dependências do sistema necessárias para SQLAlchemy
-RUN apk add --no-cache gcc musl-dev libffi-dev
+# Instala dependências do sistema necessárias para SQLAlchemy e health checks
+RUN apk add --no-cache gcc musl-dev libffi-dev curl
 
 # Copia o arquivo de requirements primeiro para aproveitar o cache do Docker
 COPY requirements.txt .
@@ -26,4 +26,4 @@ USER appuser
 EXPOSE 8000
 
 # Comando para iniciar a aplicação
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]

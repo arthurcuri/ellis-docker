@@ -1,0 +1,12 @@
+services:
+  escola-api:
+    build: .
+    container_name: api
+    ports:
+      - "8000:8000"
+    volumes:
+      # Persiste o banco de dados SQLite
+      - ./escola.db:/app/escola.db
+      # Volume para desenvolvimento (opcional, remova em produção)
+      - .:/app
+    
